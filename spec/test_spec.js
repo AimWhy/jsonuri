@@ -1,15 +1,24 @@
 'use strict'
 
-const safeTrim = require('../dist/index')
+const JsonUri = require('../dist/jsonuri.common.js')
+const exampleData = function () {
+  return {
+    "id" : "1001",
+    "name" : "Example Data"
+  }
+}
 
-describe('safeTrim', () => {
-  
+
+describe('JsonUri', () => {
+  it('{}', () => {
+    expect(JsonUri + '').toEqual('[object Object]')
+  })
 })
 
-describe('bad args', () => {
-  //it('{}', () => {
-  //  expect(safeTrim({})).toEqual('[object Object]')
-  //})
+describe('get set', () => {
+  it('get', () => {
+    expect({}).toEqual('[object Object]')
+  })
   //
   //it('[]', () => {
   //  expect(safeTrim([])).toEqual('')
